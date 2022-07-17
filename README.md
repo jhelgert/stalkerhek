@@ -8,6 +8,13 @@ Stalkerhek is a proxy application that allows you to share the same Stalker port
 See [Stalkerhek Documentation](https://github.com/erkexzcx/stalkerhek/wiki).
 
 
+# How to run
+
 ``` bash
-docker run -p 9999:9999
+docker run \
+    -p 9999:9999 \
+    -e MODEL="MAG250" \
+    -e MAC="00:1A:79:00:00:00" \
+    -e URL="http://dummyurl.com:8000/server/load.php" \
+    stalkerhek:latest
 ```
